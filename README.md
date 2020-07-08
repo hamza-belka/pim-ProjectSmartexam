@@ -9,13 +9,13 @@ Also, with an android application that allows easy and immediate access to the
 exams and the ability to submit answered sheets.
 
 # 
-[![demo](https://drive.google.com/file/d/1lOf441MAZqwvs24FzD9N_AKlB8kWGbDZ/preview)]
+[![demo](https://drive.google.com/file/d/1lOf441MAZqwvs24FzD9N_AKlB8kWGbDZ)]
 
 
 <div align="center">
-      <a href="https://drive.google.com/file/d/1lOf441MAZqwvs2 4FzD9N_AKlB8kWGbDZ/preview">
+      <a href="https://drive.google.com/file/d/1lOf441MAZqwvs2 4FzD9N_AKlB8kWGbDZ">
      <img 
-      src="https://drive.google.com/file/d/1lOf441MAZqwvs24FzD9N_AKlB8kWGbDZ/preview" 
+      src="https://drive.google.com/file/d/1lOf441MAZqwvs24FzD9N_AKlB8kWGbDZ" 
       alt="Everything Is AWESOME" 
       style="width:100%;">
       </a>
