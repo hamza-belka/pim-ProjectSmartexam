@@ -1,0 +1,49 @@
+<style>
+  .btn {
+    background-color: DodgerBlue;
+    border: none;
+    color: white;
+    padding: 6px 10px;
+    font-size: 10px;
+    cursor: pointer;
+  }</style>
+  <style>
+    .btn1 {
+      background-color: green;
+      border: none;
+      color:green;
+      padding: 8px 13px;
+      font-size: 12px;
+      cursor: pointer;
+    }</style>
+
+<div class="container">
+<table class="table table-trapped" style="width:80%">
+   <thead class="black white-text"><tr>
+      <th >Matiere</th>
+      <th >Date</th>
+      <th >Module</th>
+      <th >Class</th>
+    <th >Correction</th>
+      <th >Copie Corriger</th>
+      <th >Note </th>
+    </tr></thead> 
+    <tbody>
+    <tr *ngFor =" let data of arrayexam ; let i=index">
+      <td>{{data.matiere}}</td>
+      <td>{{data.date}}</td>
+      <td *ngFor =" let c of arraymod ">{{c.modulename}}</td>
+      <td *ngFor =" let cc of arrayclass ">{{cc.pseudoclass}}</td>
+     <td> <input class="btn" type="file" name="image" (change)="selectImage($event)" > <button class="btn2" type="submit" (click)="onSubmit(data)">Submit</button> </td>
+
+      <td><button type="button" (click)="correct(i)">
+        <img src="../../assets/img/imgvalide.jpg" > 
+       </button></td>
+
+     <td><button type="button"  (click)="addItem(i)">
+      <img src="../../assets/img/imge.png" > 
+     </button> </td>
+
+    </tr></tbody>
+  </table>
+</div>

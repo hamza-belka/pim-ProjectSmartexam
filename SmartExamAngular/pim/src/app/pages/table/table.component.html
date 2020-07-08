@@ -1,0 +1,71 @@
+<div class="row">
+  <div class="col-md-12">
+    <div class="card">
+      <div class="card-header">
+        <h4 class="card-title">User list</h4>
+      </div>
+      <div>
+        <form>
+          <div class="input-group no-border">
+            <input type="text" value="" class="form-control" placeholder="Search..." [(ngModel)]="searchText" name="search" >
+            <div class="input-group-append">
+              <div class="input-group-text">
+                <i class="nc-icon nc-zoom-split"></i>
+              </div>
+            </div>
+          </div>
+        </form>
+      <select matNativeControl required [(ngModel)]="selectedValue" name="type" id="role" (change)="getlist()">
+        <option value="etudiant" >Student</option>
+        <option value="enseignant">Teacher</option>
+      </select>
+    </div>
+      <div class="card-body">
+        <div class="table-responsive">
+          <table class="table">
+            <thead class=" text-primary">
+              <th>
+                Name
+              </th>
+              <th>
+                Email
+              </th>
+              <th>
+                Adress
+              </th>
+              <th class="text-right">
+                phone
+              </th>
+            </thead>
+            <tbody *ngFor="let obj of userarray | filter:searchText; let i=index ">
+              <tr>
+                <td>
+                 {{obj.name}}
+                </td>
+                <td>
+                  {{obj.email}} 
+                 </td>
+                 <td>
+                  {{obj.adresse}}
+                 </td>
+                 <td  class="text-right">
+                  {{obj.numtel}}
+                 </td>
+                 <td>
+                  <span (click)="openDialog(i)"  class="nc-icon nc-simple-remove"></span>
+                 </td>
+               </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-12">
+    <div class="card card-plain">
+      <div class="card-header">
+        
+      </div>
+    </div>
+  </div>
+</div>

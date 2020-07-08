@@ -1,0 +1,215 @@
+<style>
+  .btn {
+    background-color: DodgerBlue;
+    border: none;
+    color: white;
+    padding: 6px 10px;
+    font-size: 10px;
+    cursor: pointer;
+  }</style>
+<div *ngIf="enseignant">
+  <div class="form-group col-md-4">
+    <div class="shadowbox {
+      width: 15em;
+      border: 1px solid #333;
+      box-shadow: 8px 8px 5px #444;
+      padding: 8px 12px;
+      background-image: linear-gradient(180deg, #fff, #ddd 40%, #ccc);">
+    <label>Examen</label>
+    <input type="text"  id="examen" class="form-control"> 
+    <label>Nombre de copies</label>
+    <input type="text"  id="nbrecopie" class="form-control"></div>
+  </div>
+  <div>
+    
+    <label>module</label>
+    <div class="example-container">
+   
+  
+      <mat-form-field class="btn" >
+        <mat-select id="module" [(ngModel)]="idmodule">
+          <mat-option value="option" *ngFor="let m of arraymodule" [value]="m.id" >{{m.modulename}}</mat-option>
+        </mat-select>
+        <mat-hint >Here's the dropdown arrow ^</mat-hint>
+      </mat-form-field>
+    </div>
+    <label>class</label>
+    <div class="example-container">
+   
+  
+      <mat-form-field class="btn" >
+        <mat-select id="idclass" [(ngModel)]="idclass">
+          <mat-option value="option" *ngFor="let c of arrayclass" [value]="c.id" >{{c.pseudoclass}}</mat-option>
+        </mat-select>
+        <mat-hint >Here's the dropdown arrow ^</mat-hint>
+      </mat-form-field>
+    </div>
+    <input class="btn" type="checkbox" [checked]="checked" (change)="checked = !checked">feuille de reponse separee
+   
+   
+ 
+    
+
+  
+  </div>
+
+ 
+  <div class="form-group col-md-4">
+    
+    <mat-form-field class="example-full-width" style="
+    background-color: lightblue;
+  ">
+      <mat-label>Choose a date</mat-label>
+      <input matInput [min]="minDate" [max]="maxDate" [matDatepicker]="picker" id="date" >
+      <mat-datepicker-toggle matSuffix [for]="picker" ></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+    
+
+  </div>
+  <div class="form-group col-md-4">
+    <label>remarque</label>
+    <input type="text" id="remarque" class="form-control">
+
+  </div>
+  <div>
+    <label>pour une reponse correcte, veillez ajouter un "+" dans le champs du reponse, sinon , veillez ajouter un "-"</label>
+
+  </div>
+  <form class="example-form">
+    <div class="container">
+      <div class="form-row" *ngFor="let obj of dataarray; let i=index">
+        <div class="form-group col-md-4">
+          <label>Question</label>
+          <input type="text" class="form-control" name="question{{i}}" id="question{{i}}">
+          <mat-radio-group [(ngModel)]="selected" name="radio">
+            <mat-radio-button    *ngFor="let choix of typearray" value="{{choix}}" >choix {{choix}}</mat-radio-button>
+            
+          </mat-radio-group>
+          
+
+          <div class="form-group col-md-4" *ngFor="let obj of ansarray; let j=index">
+            <div>
+              <label>reponse</label>
+              <input type="text" class="form-control" name="reponse{{i}}{{j}}" id="reponse{{i}}{{j}}"> 
+            </div>
+          </div>
+           <div >
+            <span (click)="delreponse(j)" class="btn btn-danger">-</span>
+              <span (click)="addreponse(j)" class="btn btn-primary">ajouter reponse</span>
+
+            </div>
+            
+
+          
+
+          
+        
+          <span (click)="delquestion(i)" class="btn btn-danger">effacer question</span>
+          <span (click)="addquestion(i)" class="btn btn-primary">ajouter question</span>
+        </div>
+        <div class="form-group col-md-4">
+
+
+        </div>
+
+        
+
+
+      </div>
+    </div>
+  
+  </form>
+  <button  (click)="enregistrer()" class="btn btn-primary">enregistrer</button>
+  <button  (click)="openDialog()" class="btn btn-primary">apercu</button>
+
+</div>
+
+
+<div *ngIf="admin">
+  <div class="form-group col-md-4">
+    <label>Name</label>
+    <input type="text" class="form-control" name="name" id="name">
+
+  </div>
+  <form >
+    <div class="container">
+      <div class="form-row">
+        <div class="form-group col-md-4">
+          <label>Email</label>
+          <input type="text" class="form-control" name="firstname" id="email">
+
+        </div>
+        <div class="form-group col-md-4">
+          <label>Adress</label>
+          <input type="text" class="form-control" name="lastname" id="adress">
+
+        </div>
+        <div class="form-group col-md-4">
+          <label>Phone number</label>
+          <input type="text" class="form-control" name="email" id="phone">
+
+
+        </div>
+        <div class="form-group col-md-4">
+          <label>Password</label>
+          <input type="password" class="form-control" name="password" id="password">
+
+
+        </div>
+        <div class="form-group col-md-4">
+          <label>Confirm password</label>
+          <input type="password" class="form-control" name="confirmp" id="confirmp">
+
+
+        </div>
+        <div class="form-group col-md-4">
+          <label>Role</label>
+          <div>
+            <select matNativeControl required [(ngModel)]="selectedValue" name="type" id="role">
+              <option value="etudiant">Student</option>
+              <option value="enseignant">Teacher</option>
+              <option value="admin">Admin</option>
+
+            </select>
+          </div>
+          
+
+
+          <div class="form-group col-md-4" *ngIf="selectedValue == 'etudiant'">
+
+            
+            <label for="name">Level</label>
+            <select matNativeControl required name="types" id="level"#mySelect (change)='onOptionsSelected(mySelect.value)'>
+              <option *ngFor="let l of levels" [value]="l.level">
+                {{l.level}}
+              </option>
+            </select>
+            
+            <label for="name">Class</label>
+            <select matNativeControl required name="types" id="classes">
+              <option *ngFor="let c of classes" [value]="c.id">
+                {{c.pseudoclass}}
+              </option>
+            </select>
+          </div>
+        </div>
+        
+
+      </div>
+      <div class="form-group col-md-4">
+
+
+      </div>
+
+      <button (click)="newUser()" class="btn btn-primary">Confirm</button>
+
+
+
+    </div>
+  </form>
+
+
+
+
+</div>

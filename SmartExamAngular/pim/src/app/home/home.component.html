@@ -1,0 +1,58 @@
+
+<div> <img src="https://esprit.tn/uploads/Objet%20dynamique%20vectoriel-e1104.png" id="bg" alt="">
+
+
+
+<div class="login-wrap">
+	
+	<div class="login-html">
+		<input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Student</label>
+		<input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab">Teacher</label>
+		<div class="login-form">
+			<div class="sign-in-htm">
+				<div class="group">
+					<label for="user" class="label">Email</label>
+					<input [(ngModel)]="stmail" id="stmail" type="text" class="input">
+				</div>
+				<div class="group">
+					<label for="pass" class="label">Password</label>
+					<input [(ngModel)]="stpass" id="stpass" type="password" class="input" data-type="password">
+				</div>
+				<div class="group">
+					<input id="check" type="checkbox" class="check" checked>
+					<label for="check"><span class="icon"></span> Keep me Signed in</label>
+				</div>
+				<div class="group">
+					<button  (click)="loginet()" class="button" value="Sign In">Sign In</button>
+				</div>
+				<div class="hr"></div>
+				<div class="foot-lnk">
+					<a style="color:powderblue;" href="#forgot">Forgot Password?</a>
+				</div>
+			</div>
+			<div class="sign-up-htm">
+				<div class="group">
+					<label for="user" class="label">Email</label>
+					<input [(ngModel)]="tmail" id="tmai" type="text" class="input">
+				</div>
+				<div class="group">
+					<label for="pass" class="label">Password</label>
+					<input [(ngModel)]="tpass"  id="tpass" type="password" class="input" data-type="password">
+				</div>
+				<div class="group">
+					<input id="check" type="checkbox" class="check" checked>
+					<label for="check"><span class="icon"></span> Keep me Signed in</label>
+				</div>
+				<div class="group">
+					<button  (click)="loginens()" class="button" value="Sign In">Sign In</button>
+				</div>
+				<div class="hr"></div>
+				<div class="foot-lnk">
+					<a style="color:powderblue;" href="#forgot">Forgot Password?</a>
+				</div>
+			
+			</div>
+		</div>
+	</div>
+</div>
+</div>

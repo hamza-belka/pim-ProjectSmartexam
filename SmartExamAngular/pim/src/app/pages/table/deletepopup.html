@@ -1,0 +1,11 @@
+<div mat-dialog-content>
+  <p>You are about to delete {{username}}</p>
+  
+</div>
+<div mat-dialog-actions>
+    
+  <button mat-button (click)="onNoClick()">Cancel</button>
+
+  <button mat-button (click)="deluser()" cdkFocusInitial>Ok</button>
+
+</div>
