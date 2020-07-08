@@ -10,4 +10,3 @@ exams and the ability to submit answered sheets.
 
 # 
 
-<iframe src="https://drive.google.com/file/d/1lOf441MAZqwvs24FzD9N_AKlB8kWGbDZ/preview" width="640" height="480"></iframe>
