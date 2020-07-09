@@ -9,6 +9,6 @@ correction) can be downloaded in one click.
 Also, with an android application that allows easy and immediate access to the
 exams and the ability to submit answered sheets.
 
-[![Demo](https://img.youtube.com/vi/https://www.youtube.com/embed/thY8740leu8/0.jpg)](https://www.youtube.com/watch?v=https://www.youtube.com/embed/thY8740leu8)
+[![Demo](https://img.youtube.com/vi/thY8740leu8/0.jpg)](https://www.youtube.com/watch?v=https://www.youtube.com/embed/thY8740leu8)
 
 
