@@ -1,4 +1,4 @@
-# pim-ProjectSmartexam
+  # pim-ProjectSmartexam
 
 
 Smart exam’s added value is best shown at its easy concept, instead of online
@@ -25,6 +25,6 @@ exams and the ability to submit answered sheets.
 ![220px-OpenCV_Logo_with_text](https://user-images.githubusercontent.com/47435198/86982661-1e867f80-c18a-11ea-8e95-9af6adcc22be.png)
 
 # Demo web/mobile 
-[             ![Demo](https://img.youtube.com/vi/thY8740leu8/0.jpg)](https://www.youtube.com/watch?v=thY8740leu8)
+[ center ![Demo](https://img.youtube.com/vi/thY8740leu8/0.jpg)](https://www.youtube.com/watch?v=thY8740leu8)
 
 
