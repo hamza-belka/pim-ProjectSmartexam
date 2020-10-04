@@ -29,6 +29,5 @@ exams and the ability to submit answered sheets.
 
 # Demo-video web/mobile 
 [![Demo](https://img.youtube.com/vi/thY8740leu8/0.jpg)](https://www.youtube.com/watch?v=thY8740leu8)
-[![Demo](https://img.youtube.com/vi/gH4-FVs3xf4/0.jpg)](https://www.youtube.com/watch?v=gH4-FVs3xf4)
 
 
